@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png/image" href="https://cdn0.iconfinder.com/data/icons/classic-cars-by-cemagraphics/512/red_512.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container-fluid p-5 mt-4">
+
+        <h1 class="heading text-center">CAR WORLD</h1>
+
+        <div id="row1" class="row p-5">
+
+            <div id="col" class="col-4 p-5 text-light border border-1 border-secondary">
+                <div class="mb-3">
+                    <label class="form-label-lg mb-2 fs-5" style="font-weight: bold;">Car:</label>
+                    <input id="carbrand" type="text" class="form-control" placeholder="Enter your car brand">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label-lg mb-2 fs-5" style="font-weight: bold;">Price:</label>
+                    <input id="carprice" type="text" class="form-control" placeholder="Enter price">
+                </div>
+                <div class="mb-4">
+                    <label class="form-label-lg mb-2 fs-5" style="font-weight: bold;">Key:</label>
+                    <input id="carkey" type="text" class="form-control" placeholder="Enter key">
+                </div>
+                <div class="text-center pb-1">
+                    <button onclick="store()" type="submit" class="btn btn-success text-dark px-4" style="font-weight: bold;">Store Data</button>
+                </div>
+            </div>
+
+            <div id="col" class="col-4 p-5 mx-5 text-light border border-1 border-secondary">
+                <div class="mb-5">
+                    <label class="form-label-lg mb-2 fs-5" style="font-weight: bold;">Retrieve item:</label>
+                    <input id="retrievekey" type="text" class="form-control" placeholder="Enter key to retrive item">
+                </div>
+                <div class="text-center">
+                    <button onclick="retrieve()" type="submit" class="btn btn-info px-3" style="font-weight: bold;">Retrieve Data</button>
+                </div>
+                <div id="result" class="mt-5"></div>
+            </div>
+
+            <div id="col" class="col-4 p-5 text-light border border-1 border-secondary">
+                <div class="mb-5">
+                <label class="form-label-lg mb-2 fs-5" style="font-weight: bold;">Remove item:</label>
+                <input id="removekey" type="text" class="form-control" placeholder="Enter key to remove item">
+                </div>
+                <div class="text-center">
+                    <button onclick="remove()" type="submit" class="btn btn-danger text-dark px-3" style="font-weight: bold;">Remove Data</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col text-center pb-5">
+                <button id="button" onclick="clearall()" class="btn btn-dark w-50 fw-bolder fs-5" type="button">Clear all records</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
